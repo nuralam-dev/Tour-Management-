@@ -1,0 +1,125 @@
+.tour_img img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card {
+  border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+.tour_img {
+  position: relative;
+}
+
+.tour_img span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: max-content;
+  height: max-content;
+  z-index: 10;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px 0 0 0;
+}
+
+.card_top span i {
+  color: var(--secondary-color);
+}
+
+.tour_rating {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.tour_location {
+  color: var(--heading-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.tour_rating i,
+.tour_location i {
+  font-size: 1rem;
+}
+
+.tour_title {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.tour_title a {
+  text-decoration: none;
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.tour_title a:hover {
+  color: var(--secondary-color);
+}
+.card_bottom h5 {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card_bottom h5 span {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.8rem;
+}
+
+.booking_btn {
+  background-color: var(--secondary-color) !important;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem !important;
+}
+
+.booking_btn a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.booking_btn a:hover {
+  color: #fff;
+}
+
+.featured_tour-title {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.experience_content h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.experience_content p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+.counter_box span {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 10px 5px 10px 5px;
+}
+
+.counter_box h6 {
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  color: var(--text-color);
+}
