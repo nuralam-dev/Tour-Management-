@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, NavLink } from "react-router-dom";
-import { Button, Container, Row } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import { Container, Row } from "reactstrap";
 import logo from "../../assets/images/logo.png";
 import "./header.css";
 
@@ -15,8 +15,8 @@ const Header = () => {
     <header className="header">
       <Container>
         <Row>
-          {/* Logo */}
           <div className="nav_wrapper d-flex align-items-center justify-content-between">
+            {/* Logo */}
             <div className="logo">
               <img src={logo} alt="logo_image" />
             </div>
@@ -39,17 +39,8 @@ const Header = () => {
               </ul>
             </div>
 
-            {/* Buttons */}
+            {/* Mobile Menu Icon Only */}
             <div className="nav_right d-flex align-items-center gap-4">
-              <div className="nav_btns d-flex align-items-center gap-4">
-                <Button className="btn secondary__btn">
-                  <Link to="/login">Login</Link>
-                </Button>
-                <Button className="btn primary__btn">
-                  <Link to="/register">Register</Link>
-                </Button>
-              </div>
-
               <span className="mobile_menu">
                 <i className="ri-menu-line"></i>
               </span>
