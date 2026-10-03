@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/tours";
+import "../styles/tours.css";
 
-// নমুনা ট্যুর ডেটা (Backend / API থেকে ডেটা না আসা পর্যন্ত)
 const tourData = [
   {
     id: "01",
@@ -81,38 +80,42 @@ const Tours = () => {
 
         {/* Tour Grid */}
         <div className="tours__grid">
-          {filteredTours.map((tour) => (
-            <div key={tour.id} className="tour__card">
-              <div className="tour__img">
-                <img src={tour.photo} alt={tour.title} />
-                {tour.featured && <span>Featured</span>}
-              </div>
-
-              <div className="tour__body">
-                <div className="tour__location-rating">
-                  <span className="tour__location">
-                    <i className="ri-map-pin-line"></i> {tour.city}
-                  </span>
-                  <span className="tour__rating">
-                    <i className="ri-star-fill"></i> {tour.rating} ({tour.reviewsCount})
-                  </span>
+          {filteredTours.length > 0 ? (
+            filteredTours.map((tour) => (
+              <div key={tour.id} className="tour__card">
+                <div className="tour__img">
+                  <img src={tour.photo} alt={tour.title} />
+                  {tour.featured && <span>Featured</span>}
                 </div>
 
-                <h5 className="tour__title">
-                  <Link to={`/tours/${tour.id}`}>{tour.title}</Link>
-                </h5>
+                <div className="tour__body">
+                  <div className="tour__location-rating">
+                    <span className="tour__location">
+                      <i className="ri-map-pin-line"></i> {tour.city}
+                    </span>
+                    <span className="tour__rating">
+                      <i className="ri-star-fill"></i> {tour.rating} ({tour.reviewsCount})
+                    </span>
+                  </div>
 
-                <div className="tour__footer">
-                  <h5>
-                    ${tour.price} <span>/per person</span>
+                  <h5 className="tour__title">
+                    <Link to={`/tours/${tour.id}`}>{tour.title}</Link>
                   </h5>
-                  <Link to={`/tours/${tour.id}`} className="btn__book">
-                    Book Now
-                  </Link>
+
+                  <div className="tour__footer">
+                    <h5>
+                      ${tour.price} <span>/per person</span>
+                    </h5>
+                    <Link to={`/tours/${tour.id}`} className="btn__book">
+                      Book Now
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <h4 className="no__result">No tours found!</h4>
+          )}
         </div>
       </div>
     </div>

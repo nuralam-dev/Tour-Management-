@@ -1,18 +1,18 @@
-import React from "react";
-import { Container, Row, Button } from "reactstrap";
+import React from 'react';
 import { Link, NavLink } from "react-router-dom";
+import { Button, Container, Row } from "reactstrap";
 import logo from "../../assets/images/logo.png";
 import "./header.css";
 
-const nav_links = [
+const nav__links = [
   { path: "/home", display: "Home" },
-  { path: "/tours", display: "Tours" },,
+  { path: "/tours", display: "Tours" },
   { path: "/about", display: "About" },
 ];
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <Container>
         <Row>
           {/* Logo */}
@@ -21,14 +21,15 @@ const Header = () => {
               <img src={logo} alt="logo_image" />
             </div>
 
-            {/* Nagigation */}
+            {/* Navigation */}
             <div className="navigation">
               <ul className="menu d-flex align-items-center gap-5">
-                {nav_links.map((item, index) => (
+                {nav__links.map((item, index) => (
                   <li className="nav_item" key={index}>
                     <NavLink
                       to={item.path}
-                      className= {(navClass=> navClass.isActive ? 'active__link' : "")
+                      className={(navClass) =>
+                        navClass.isActive ? "active__link" : ""
                       }
                     >
                       {item.display}
@@ -38,7 +39,7 @@ const Header = () => {
               </ul>
             </div>
 
-            {/* Button */}
+            {/* Buttons */}
             <div className="nav_right d-flex align-items-center gap-4">
               <div className="nav_btns d-flex align-items-center gap-4">
                 <Button className="btn secondary__btn">
